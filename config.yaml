@@ -1,0 +1,41 @@
+agent:
+  model: "claude-sonnet-4-20250514"
+  max_iterations: 10
+  token_budget: 50000
+  system_prompt: |
+    You are a helpful AI assistant with access to tools.
+    Use tools when needed to answer questions accurately.
+    Always show your reasoning step by step.
+
+guardrails:
+  max_iterations: 10
+  token_budget: 50000
+  tool_timeout: 30
+  blocked_imports:
+    - os
+    - subprocess
+    - shutil
+    - pathlib
+    - importlib
+    - ctypes
+    - socket
+  blocked_functions:
+    - eval
+    - exec
+    - compile
+    - __import__
+    - globals
+    - locals
+    - getattr
+    - setattr
+    - delattr
+    - open
+
+tools:
+  calculator: true
+  web_search: true
+  web_fetch: true
+  file_reader: true
+  python_exec: true
+  allowed_paths:
+    - "./data"

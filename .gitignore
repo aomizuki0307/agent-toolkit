@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+.env.*.local
+.venv/
+bench_results/*.json
+bench_results/*.yaml
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+dist/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# secrets / keys
+*.pem

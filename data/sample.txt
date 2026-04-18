@@ -1,0 +1,8 @@
+This is a sample text file for testing the file_reader tool.
+It contains multiple lines of text.
+
+Line 4 has some numbers: 42, 3.14, 100.
+Line 5 mentions Tokyo, Japan.
+
+The quick brown fox jumps over the lazy dog.
+This file is located in the data/ directory.

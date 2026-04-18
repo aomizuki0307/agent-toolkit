@@ -1,0 +1,60 @@
+tasks:
+  - id: calc_basic
+    query: "What is 25 * 4 + 13?"
+    expected_tools: [calculator]
+    expected_answer_contains: ["113"]
+    category: math
+
+  - id: calc_sqrt
+    query: "What is the square root of 144 plus 3 to the power of 4?"
+    expected_tools: [calculator]
+    expected_answer_contains: ["93"]
+    category: math
+
+  - id: calc_trig
+    query: "What is sin(pi/2) + cos(0)?"
+    expected_tools: [calculator]
+    expected_answer_contains: ["2"]
+    category: math
+
+  - id: file_read
+    query: "Read the file data/sample.txt and tell me what animal is mentioned."
+    expected_tools: [file_reader]
+    expected_answer_contains: ["fox"]
+    category: file
+
+  - id: file_numbers
+    query: "Read data/sample.txt and sum all the integers mentioned in line 4."
+    expected_tools: [file_reader, calculator]
+    expected_answer_contains: ["142"]
+    category: file
+
+  - id: search_basic
+    query: "Search the web for 'Python programming language creator' and tell me who created Python."
+    expected_tools: [web_search]
+    expected_answer_contains: ["guido"]
+    category: search
+
+  - id: python_list
+    query: "Use Python to generate the first 10 Fibonacci numbers and return them as a list."
+    expected_tools: [python_exec]
+    expected_answer_contains: ["1", "2", "3", "5", "8"]
+    category: code
+
+  - id: python_sort
+    query: "Use Python to sort the list [64, 25, 12, 22, 11] and show the result."
+    expected_tools: [python_exec]
+    expected_answer_contains: ["11", "12", "22", "25", "64"]
+    category: code
+
+  - id: multi_step_calc
+    query: "What is the area of a circle with radius 7? Use pi from the calculator."
+    expected_tools: [calculator]
+    expected_answer_contains: ["153"]
+    category: math
+
+  - id: multi_tool
+    query: "Read data/sample.txt, find any numbers in it, and calculate their sum."
+    expected_tools: [file_reader, calculator]
+    expected_answer_contains: ["146"]
+    category: multi
