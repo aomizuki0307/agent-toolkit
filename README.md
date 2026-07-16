@@ -62,6 +62,8 @@ pytest tests/ -v
 | `web_fetch` | URL fetch + HTML->text | httpx |
 | `python_exec` | Sandboxed Python execution | stdlib |
 
+> Note: `python_exec`'s sandbox is a best-effort AST blocklist running in a subprocess — it blocks dangerous imports/calls but is not OS-level isolation. Don't feed it untrusted code in production.
+
 ## Project Structure
 
 ```
