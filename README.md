@@ -1,5 +1,7 @@
 # AI Agent Toolkit
 
+[![tests](https://github.com/aomizuki0307/agent-toolkit/actions/workflows/tests.yml/badge.svg)](https://github.com/aomizuki0307/agent-toolkit/actions/workflows/tests.yml)
+
 A ReAct agent built from primitives — no LangChain, no CrewAI, no AutoGen.
 
 ## Architecture
